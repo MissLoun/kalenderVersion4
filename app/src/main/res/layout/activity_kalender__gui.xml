@@ -1,0 +1,191 @@
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:layout_marginTop="10dp"
+
+
+    android:background="@android:color/white">
+
+    <RelativeLayout
+        android:id="@+id/layout_Kalender_NavigationBar"
+        android:layout_width="match_parent"
+        android:layout_height="86dp"
+        android:background="@color/gelb"
+        android:layout_marginBottom="10dp">
+
+        <Button
+            android:id="@+id/btn_Kalender_Zuvor"
+            android:layout_width="80dp"
+            android:layout_height="35dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="@string/zuvor"
+            android:background="@android:color/white"
+            android:layout_marginStart="10dp"
+            android:textColor="@color/gelb"/>
+
+        <TextView
+            android:id="@+id/txt_Kalender_Monat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_alignTop="@+id/btn_Kalender_Zuvor"
+
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="-12dp"
+            android:layout_marginRight="0dp"
+            android:layout_toLeftOf="@id/btn_Kalender_Weiter"
+
+            android:layout_toRightOf="@id/btn_Kalender_Zuvor"
+            android:gravity="center"
+            android:text="Monat"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+
+            android:textAllCaps="true"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+            android:textSize="28dp" />
+
+        <TextView
+            android:id="@+id/txt_Kalender_Jahr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_below="@id/txt_Kalender_Monat"
+
+            android:layout_alignTop="@+id/btn_Kalender_Zuvor"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginRight="0dp"
+            android:layout_toLeftOf="@id/btn_Kalender_Weiter"
+            android:layout_toRightOf="@id/btn_Kalender_Zuvor"
+            android:gravity="center"
+            android:textAllCaps="true"
+            android:text="Jahr"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" />
+
+        <Button
+            android:id="@+id/btn_Kalender_Weiter"
+            android:layout_width="80dp"
+            android:layout_height="35dp"
+            android:layout_alignParentRight="true"
+            android:background="@android:color/white"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="10dp"
+            android:text="@string/next"
+            android:textColor="@color/gelb"/>
+    </RelativeLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/layout_Kalender_Wochentage"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:background="@color/gelb"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp">
+
+        <TextView
+            android:id="@+id/txt_Kalender_Mo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Mo"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:gravity="center_horizontal"
+            android:textColor="@android:color/white"/>
+
+        <TextView
+            android:id="@+id/txt_Kalender_Di"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Di"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:gravity="center_horizontal"
+            android:textColor="@android:color/white"/>
+
+        <TextView
+            android:id="@+id/txt_Kalender_Mi"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Mi"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:gravity="center_horizontal"
+            android:textColor="@android:color/white"/>
+
+        <TextView
+            android:id="@+id/txt_Kalender_Do"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Do"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:gravity="center_horizontal"
+            android:textColor="@android:color/white"/>
+
+        <TextView
+            android:id="@+id/txt_Kalender_Fr"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Fr"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:gravity="center_horizontal"
+            android:textColor="@android:color/white"/>
+
+        <TextView
+            android:id="@+id/txt_Kalender_Sa"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Sa"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:gravity="center_horizontal"
+            android:textColor="@android:color/white"/>
+
+        <TextView
+            android:id="@+id/txt_Kalender_So"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="So"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:gravity="center_horizontal"
+            android:textColor="@android:color/white"/>
+
+
+    </LinearLayout>
+
+    <GridView
+        android:id="@+id/grid_Kalender_Tabelle_AktuellerMonat"
+        android:layout_width="match_parent"
+        android:layout_height="311dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:clickable="false"
+        android:numColumns="7" >
+
+    </GridView>
+
+
+
+</LinearLayout>
